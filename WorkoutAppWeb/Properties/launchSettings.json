@@ -1,0 +1,34 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:33629",
+      "sslPort": 44350
+    }
+  },
+  "profiles": {
+    "WorkoutAppWeb": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7151;http://localhost:5151",
+      "dotnetRunMessages": true
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:33629",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "UseSsl": true,
+      "AppUrl_IISExpress": "http://localhost:33629",
+      "IisExpressBitness": "Default",
+      "HostingModel": "Default",
+      "EnableAnonymousAuthentication": true
+    }
+  }
+}
