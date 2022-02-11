@@ -1,10 +1,11 @@
 ﻿@page
-@model WorkoutAppWeb.Pages.Workouts.CreateModel
+@model WorkoutAppWeb.Pages.Workouts.EditModel
 
 <form method="post">
+    <input hidden asp-for="Workout.id"></input>
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <div class="text-primary pl-3">Add Workout</div>
+            <div class="text-primary pl-3">Edit Workout</div>
             <hr />
             <div asp-validation-summary="All"></div>
             <div class="mb-3">
@@ -18,7 +19,7 @@
                <span asp-validation-for="Workout.repCount" class="text-danger"></span>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px;">Add</button>
+       <button type="submit" class="btn btn-primary" style="width:150px;">Update</button>
         <a asp-page="Index" class="btn btn-secondary" style="width:150px;">Back to List</a>
     </div>
 </form>

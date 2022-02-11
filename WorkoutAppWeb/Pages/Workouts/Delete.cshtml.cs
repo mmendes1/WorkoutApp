@@ -5,17 +5,18 @@ using WorkoutAppWeb.Models;
 
 namespace WorkoutAppWeb.Pages.Workouts
 {
-    public class CreateModel : PageModel
+    public class DeleteModel : PageModel
     {
         private readonly workoutDbContext _db;
         [BindProperty]
         public Workout Workout { get; set; }
-        public CreateModel(workoutDbContext db)
+        public DeleteModel(workoutDbContext db)
         {
             _db = db;
         }
-        public void OnGet()
+        public void OnGet(int id)
         {
+            Workout = _db.homeWorkoutDB.Find(id);
         }
 
         public async Task<IActionResult> OnPost()
@@ -27,7 +28,7 @@ namespace WorkoutAppWeb.Pages.Workouts
 
             if (ModelState.IsValid)
             {
-                await _db.homeWorkoutDB.AddAsync(Workout);
+                _db.homeWorkoutDB.Remove(Workout); 
                 await _db.SaveChangesAsync();
                 return RedirectToPage("Index");
             }
