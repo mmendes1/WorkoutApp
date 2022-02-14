@@ -21,16 +21,13 @@ namespace WorkoutAppWeb.Pages.Workouts
 
         public async Task<IActionResult> OnPost()
         {
-            if(Workout.name == Workout.repCount.ToString())
+            var workoutFromDb = _db.homeWorkoutDB.Find(Workout.id);
+            if (workoutFromDb != null)
             {
-                ModelState.AddModelError("Workout.name", "The name field should not be a number.");
-            }
-
-            if (ModelState.IsValid)
-            {
-                _db.homeWorkoutDB.Remove(Workout); 
+                _db.homeWorkoutDB.Remove(workoutFromDb);
                 await _db.SaveChangesAsync();
-                return RedirectToPage("Index");
+                TempData["success"] = "Workout deleted successfully.";
+                    return RedirectToPage("Index");
             }
             return Page();
         }

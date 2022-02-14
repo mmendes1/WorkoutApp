@@ -29,6 +29,7 @@ namespace WorkoutAppWeb.Pages.Workouts
             {
                 await _db.homeWorkoutDB.AddAsync(Workout);
                 await _db.SaveChangesAsync();
+                TempData["success"] = "Workout created successfully.";
                 return RedirectToPage("Index");
             }
             return Page();

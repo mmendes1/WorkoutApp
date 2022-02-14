@@ -30,6 +30,7 @@ namespace WorkoutAppWeb.Pages.Workouts
             {
                 _db.homeWorkoutDB.Update(Workout);
                 await _db.SaveChangesAsync();
+                TempData["success"] = "Workout edited successfully.";
                 return RedirectToPage("Index");
             }
             return Page();
