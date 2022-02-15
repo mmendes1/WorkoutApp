@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyHQdR8caREa7J0lxsYvpyAAAAAACAAAAAAAQZgAAAAEAACAAAAAAcirZeul+vDRLFtcSauoSYTVbVO+2tkaAE2hFAJfUvAAAAAAOgAAAAAIAACAAAADhvSD16d7t+jffOKmYBnklg9bSLip/bDUxuK1em5vE4YAAAADf8H75+dgePqk0As5Ap90++CsXoi6RfgfVs4b3TMBpOz61RGrJ59m0ADhEdGXkNI2EOMkc8zwtgfBCZgbSfmwfYc6ClKV8JzfK5QPFVpmcyMYMNvDQTzosvsQ2a09QUR4T7CWw6WG+eNAR6ly61LjFW7UwERUurhxpXAEjxXT1xUAAAABFAoxl3+i1WUb4fMV0YP1VT7yUZIJcaxpkpCSqj6S2My1yHkrB8zkfUNR7t4y3ifCnfiNMCbsIgYhdf9V85Z/J</EncryptedPassword>
+    <History>True|2022-02-15T18:05:07.5750687Z;False|2022-02-15T13:01:42.3635982-05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:mm-workoutapp.database.windows.net,1433%3bInitial Catalog=workoutApp_db%3bUser Id=admin-mm%40mm-workoutapp%3bPassword=w!RK3Pb7NT</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="WorkoutAppWeb.Data.workoutDbContext">
+      <Value>Data Source=tcp:mm-workoutapp.database.windows.net,1433%3bInitial Catalog=workoutApp_db%3bUser Id=admin-mm%40mm-workoutapp%3bPassword=w!RK3Pb7NT</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
